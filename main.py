@@ -32,4 +32,6 @@ except ValueError:
     print("Remote 'origin' created.")
 
 # 推送到远程仓库
-origin.push(refspec='refs/heads/main:refs/heads/main')
+push_result = origin.push(refspec='refs/heads/main:refs/heads/main')
+print(f"Push result: {push_result}")
+
