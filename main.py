@@ -16,12 +16,11 @@ remote_repo_url = 'git@github.com:MasterL-min/pythongit-learning.git'
 
 # 添加并提交 main.py 文件
 repo.index.add(['main.py'])
-repo.index.commit("first commit with main.py")
+repo.index.commit("second commit with main.py")
 
 # 创建并切换到 main 分支
 repo.head.reference = repo.create_head('main')
 repo.head.reset(index=True, working_tree=True)
-
 # 检查远程仓库是否已存在
 try:
     origin = repo.remote('origin')
